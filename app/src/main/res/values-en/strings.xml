@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Temperature Conversion</string>
+    <string name="input_invalid">The input cannot be empty!</string>
+    <string name="same_input_error">The initial and target units must not be the same!</string>
+    <string name="kembali">back</string>
+    <string name="result">result</string>
+    <string name="title">Enter the initial temperature and convert it to the desired temperature!</string>
+    <string name="input_suhu">Enter the initial temperature</string>
+    <string name="convert">Select Conversion</string>
+    <string name="hitung">Convert</string>
+    <string name="tentang_aplikasi">Temperature is the degree of hotness or coldness of an object. The instrument used to measure temperature is a thermometer, which is made of mercury (Hg). Mercury is used as a temperature measuring tool because it has a very low boiling point.  There are three temperature scales used in thermometers: Celsius (°C), Fahrenheit (°F), and Kelvin (K). The Celsius and Fahrenheit scales are commonly found in daily life, while the Kelvin scale is designated as the International System of Units (SI). Learn more below!  Celsius (°C) Celsius is the most commonly used temperature scale, both in Indonesia and internationally. Celsius is measured in degrees Celsius. In terms of comparison between cold and hot temperatures, water freezes at 0 degrees Celsius and boils at 100 degrees Celsius.  Fahrenheit (°F) According to Lumen Learning, Fahrenheit is the most widely used temperature scale in the United States. The Fahrenheit scale is measured in degrees Fahrenheit. In this scale, water boils at 212 degrees Fahrenheit and freezes at 32 degrees Fahrenheit.  Kelvin (K) The Kelvin scale does not have degrees. The unit of measurement on this scale is Kelvin (K). As a comparison, in this scale, water boils at 373.15 Kelvin and freezes at 273.15 Kelvin.</string>
+    <string name="awal">From</string>
+    <string name="tujuan">To</string>
+    <string name="input_angka">The input must be a number</string>
+</resources>

@@ -3,18 +3,19 @@
     <string name="title">Masukkan suhu awal dan konversikan ke suhu yang anda mau!</string>
     <string name="input_suhu">Masukkan suhu awal</string>
     <string name="convert">Pilih Konversi</string>
-    <string name="hitung">Hitung</string>
-    <string name="tentang_aplikasi">Suhu merupakan derajat panas atau dinginnya suatu benda. Alat ukur suhu adalah termometer yang berbahan dasar air raksa (Hg). Air raksa digunakan sebagai pengukur suhu sebab memiliki titik didih yang sangat rendah.\n
-    Terdapat tiga skala suhu yang digunakan termometer yakni Celsius (oC), Fahrenheit (oH), dan Kelvin (K). Skala Celsius dan Fahrenheit banyak ditemukan di kehidupan sehari-hari, sedangkan skala suhu yang ditetapkan sebagai Satuan Internasional (SI) adalah Kelvin. cari tahu selengkapnya berikut ini!\n\n
-        1. Cercius(C)\n
-        Celcius ini merupakan skala suhu yang paling sering dipakai, baik di Indonesia maupun di luar negeri. Celcius memiliki satuan derajat C. Dalam melakukan perbandingan antara dingin dan panas, skala Celcius air membeku pada suhu 0 derajat celcius. Sementara skala celcius pada air mendidih adalah 100 derajat celcius.\n\n
-        2. Farenheit (F)\n
-        Dilihat dari Lumen Learning, Fahrenheit ini merupakan skala pengukur suhu yang paling banyak dipakai di negara Amerika Serikat. Skala Fahrenheit mempunyai satuan derajat Farenheit. Adapun di skala ini, air mendidih ada pada suhu 212 derajat F, sementara air membeku ada pada skala 32 derajat Fahrenheit.\n\n
-        3. Kelvin (K)\n
-        Skala kelvin diketahui tidak memiliki derajat. Satuan pada skala ini adalah Kelvin (K). Sebagai perbandingan, dalam skala ini air mendidih pada suhu 373,15 Kelvin, dan air membeku pada suhu 273,15 Kelvin.\n\n
-    </string>
-    <string name="input_invalid">Tidak boleh kosong!</string>
-    <string name="same_input_error">Satuan awal dan tujuan tidak boleh sama!</string>
+    <string name="hitung">Konversi</string>
+    <string name="input_invalid">Inputan suhu tidak boleh kosong!</string>
+    <string name="same_input_error">Inputan awal dan tujuan tidak boleh sama!</string>
     <string name="kembali">Kembali</string>
-
+    <string name="result">Hasil</string>
+    <string name="tentang_aplikasi">"Suhu merupakan derajat panas atau dinginnya suatu benda. Alat ukur suhu adalah termometer, yang umumnya berbahan dasar air raksa (Hg). Air raksa digunakan sebagai pengukur suhu karena memiliki titik didih yang tinggi dan tidak mudah menguap.  Terdapat tiga skala suhu yang umum digunakan dalam termometer, yaitu Celsius (°C), Fahrenheit (°F), dan Kelvin (K). Skala Celsius dan Fahrenheit banyak digunakan dalam kehidupan sehari-hari, sedangkan skala Kelvin ditetapkan sebagai Satuan Internasional (SI) untuk pengukuran suhu.  Berikut penjelasan lebih lanjut mengenai ketiga skala suhu tersebut: \n\n
+        1. Celsius (°C)\n
+        Skala Celsius adalah skala suhu yang paling sering digunakan, baik di Indonesia maupun di banyak negara lainnya. Celsius memiliki satuan derajat Celsius (°C).  Dalam skala ini:\n- Air membeku pada suhu 0°C\n- Air mendidih pada suhu 100°C\n\n
+        2. Fahrenheit (°F)\n
+        Menurut Lumen Learning, skala Fahrenheit merupakan skala suhu yang paling banyak digunakan di Amerika Serikat. Skala ini memiliki satuan derajat Fahrenheit (°F).  Dalam skala ini:\n- Air membeku pada suhu 32°F\n- Air mendidih pada suhu 212°F\n\n
+        3. Kelvin (K)\n
+        Skala Kelvin berbeda dari dua skala sebelumnya karena tidak menggunakan derajat. Satuan suhu dalam skala ini adalah Kelvin (K).  Dalam skala ini:\n- Air membeku pada suhu 273,15 K\n- Air mendidih pada suhu 373,15 K\n Skala Kelvin sering digunakan dalam bidang ilmiah dan merupakan standar dalam sistem Satuan Internasional (SI)."</string>
+    <string name="awal">Dari</string>
+    <string name="tujuan">Ke</string>
+    <string name="input_angka">Inputan harus berupa angka</string>
 </resources>

@@ -28,6 +28,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -75,11 +76,17 @@ fun MainScreen(navController: NavHostController) {
 
 @Composable
 fun ScreenContent(modifier: Modifier = Modifier) {
-    var inputSuhu by remember { mutableStateOf("") }
-    var result by remember { mutableStateOf("") }
-    var awal by remember { mutableStateOf("Celsius") }
-    var tujuan by remember { mutableStateOf("Fahrenheit") }
-    var error by remember { mutableStateOf(false) }
+    var inputSuhu by rememberSaveable { mutableStateOf("") }
+    var result by rememberSaveable { mutableStateOf("") }
+
+    var awal by rememberSaveable { mutableStateOf("") }
+    var tujuan by rememberSaveable { mutableStateOf("") }
+
+    var error by rememberSaveable { mutableStateOf(false) }
+
+    val sameInputError = stringResource(id = R.string.same_input_error)
+    val inputInvalidError = stringResource(id = R.string.input_angka)
+    val inputKosong = stringResource(id = R.string.input_invalid)
 
     val units = listOf("Celsius", "Fahrenheit", "Kelvin")
 
@@ -98,8 +105,8 @@ fun ScreenContent(modifier: Modifier = Modifier) {
             onValueChange = {inputSuhu = it},
             label = { Text(stringResource(id = R.string.input_suhu)) }
         )
-        DropdownMenuCustom(label = "Dari", selectedOption = awal, options = units) { awal = it }
-        DropdownMenuCustom(label = "Ke", selectedOption = tujuan, options = units) { tujuan = it }
+        DropdownMenuCustom(label = stringResource(R.string.awal), selectedOption = awal, options = units) { awal = it }
+        DropdownMenuCustom(label = stringResource(R.string.tujuan), selectedOption = tujuan, options = units) { tujuan = it }
         Spacer(modifier = Modifier.height(16.dp))
 
         Box(
@@ -107,12 +114,26 @@ fun ScreenContent(modifier: Modifier = Modifier) {
             contentAlignment = Alignment.Center
         ){
             Button(onClick = {
-                println("Klik!")
-                if (awal == tujuan) {
-                    error = true
+                error = false
+                var errorMessage: String? = null
+
+                if (awal == tujuan){
+                    errorMessage = sameInputError
                 } else {
-                    result = convertTemperature(inputSuhu, awal, tujuan)
-                    error = false
+                    val value = inputSuhu.toDoubleOrNull()
+                    if (value != null){
+                        result = convertTemperature(value, awal, tujuan)
+                        error = false
+                    } else if (inputSuhu.isBlank()){
+                        errorMessage = inputKosong
+                    } else {
+                        errorMessage = inputInvalidError
+                    }
+                }
+
+                if (errorMessage != null) {
+                    error = true
+                    result = errorMessage
                 }
             }) {
                 Text(
@@ -125,11 +146,24 @@ fun ScreenContent(modifier: Modifier = Modifier) {
         Box(
             modifier = Modifier.fillMaxWidth(),
             contentAlignment = Alignment.Center
+
         ){
-            if (error) {
-                Text(text = stringResource(id = R.string.same_input_error))
+            Spacer(modifier = Modifier.height(10.dp))
+            if (error && result.isNotEmpty()) {
+                Text(
+                    text = result,
+                    color = Color.Red,
+                    style = MaterialTheme.typography.bodyMedium,
+                    modifier = Modifier.padding(top = 16.dp)
+                )
+            }else if (result.isNotEmpty()){
+                Text(
+                    text = result,
+                    style = MaterialTheme.typography.headlineLarge,
+                    modifier = Modifier.padding(top = 16.dp)
+                )
             }
-            Text(text = result)
+
         }
     }
 
@@ -157,26 +191,23 @@ fun DropdownMenuCustom(label: String, selectedOption: String, options: List<Stri
     }
 }
 
-private fun convertTemperature(input: String, awal: String, tujuan: String): String {
-    val value = input.toDoubleOrNull()
-    if (value == null) {
-        return "Inputan tidak boleh kosong!"
-    }
+private fun convertTemperature(value: Double, awal: String, tujuan: String): String {
     val  celsius = when (awal) {
         "Celsius" -> value
         "Fahrenheit" -> (value - 32) * 5 / 9
         "Kelvin" -> value - 273.15
-        else -> return "Error"
+        else -> return "Pilihan suhu awal tidak valid!"
     }
 
     val konversi = when (tujuan) {
         "Celsius" -> celsius
-        "Fahrenheit" -> (celsius * 9 / 5) + 32
+        "Fahrenheit" -> (celsius * 9.0 / 5.0) + 32.0
         "Kelvin" -> celsius + 273.15
-        else -> return "Error"
+        else -> return "Pilihan suhu tujuan tidak valid!"
     }
-    return "$value $awal = ${"%.2f".format(konversi)} $tujuan"
+    return "$value $awal \n = \n ${"%.2f".format(konversi)} $tujuan"
 }
+
 
 @Preview(showBackground = true)
 @Preview(uiMode = Configuration.UI_MODE_NIGHT_YES, showBackground = true)
