@@ -77,15 +77,6 @@ fun AboutContent(termometer: Termometer, modifier: Modifier = Modifier) {
     }
 }
 
-//fun AboutImage(termometer: Termometer, modifier : Modifier = Modifier) {
-//    Column(
-//        modifier.fillMaxSize().padding(16.dp)
-//    ) {
-//        Text(text = stringResource(R.string.tentang_aplikasi)
-//        )
-//    }
-//}
-
 @Preview(showBackground = true)
 @Preview(uiMode = Configuration.UI_MODE_NIGHT_YES, showBackground = true)
 @Composable
