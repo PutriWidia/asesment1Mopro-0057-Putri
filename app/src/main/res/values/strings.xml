@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Konversi Suhu</string>
+    <string name="title">Masukkan suhu awal dan konversikan ke suhu yang anda mau!</string>
+    <string name="input_suhu">Masukkan suhu awal</string>
+    <string name="convert">Pilih Konversi</string>
+    <string name="hitung">Hitung</string>
+    <string name="tentang_aplikasi">Suhu merupakan derajat panas atau dinginnya suatu benda. Alat ukur suhu adalah termometer yang berbahan dasar air raksa (Hg). Air raksa digunakan sebagai pengukur suhu sebab memiliki titik didih yang sangat rendah.\n
+    Terdapat tiga skala suhu yang digunakan termometer yakni Celsius (oC), Fahrenheit (oH), dan Kelvin (K). Skala Celsius dan Fahrenheit banyak ditemukan di kehidupan sehari-hari, sedangkan skala suhu yang ditetapkan sebagai Satuan Internasional (SI) adalah Kelvin. cari tahu selengkapnya berikut ini!\n\n
+        1. Cercius(C)\n
+        Celcius ini merupakan skala suhu yang paling sering dipakai, baik di Indonesia maupun di luar negeri. Celcius memiliki satuan derajat C. Dalam melakukan perbandingan antara dingin dan panas, skala Celcius air membeku pada suhu 0 derajat celcius. Sementara skala celcius pada air mendidih adalah 100 derajat celcius.\n\n
+        2. Farenheit (F)\n
+        Dilihat dari Lumen Learning, Fahrenheit ini merupakan skala pengukur suhu yang paling banyak dipakai di negara Amerika Serikat. Skala Fahrenheit mempunyai satuan derajat Farenheit. Adapun di skala ini, air mendidih ada pada suhu 212 derajat F, sementara air membeku ada pada skala 32 derajat Fahrenheit.\n\n
+        3. Kelvin (K)\n
+        Skala kelvin diketahui tidak memiliki derajat. Satuan pada skala ini adalah Kelvin (K). Sebagai perbandingan, dalam skala ini air mendidih pada suhu 373,15 Kelvin, dan air membeku pada suhu 273,15 Kelvin.\n\n
+    </string>
+    <string name="input_invalid">Tidak boleh kosong!</string>
+    <string name="same_input_error">Satuan awal dan tujuan tidak boleh sama!</string>
+    <string name="kembali">Kembali</string>
+
 </resources>
